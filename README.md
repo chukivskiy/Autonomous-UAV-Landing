@@ -35,13 +35,10 @@ The project uses **semantic segmentation** to find a safe landing zone, Archimed
 
 ### How to Run
 
-#### 1. Source ROS 2 Environment
-
 ```bash
 source /opt/ros/humble/setup.bash
 # Also source Isaac Sim / PX4 environment if needed
 
-#### 2.   Run the scripts
 # Semantic image processor
 python3 image_processor.py
 
