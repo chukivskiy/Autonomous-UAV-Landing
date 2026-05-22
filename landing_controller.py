@@ -80,7 +80,7 @@ class LandingFlyer(Node):
         self.min_descent_velocity = -0.40
 
         # PID для Z
-        self.pid_z = PID(kp=1.8, ki=0.35, kd=0.45, integral_limit=2.0)
+        self.pid_z = PID(kp=1.05, ki=0.12, kd=0.28, integral_limit=2.0)
 
         # State variables
         self.current_pose = None
@@ -196,7 +196,7 @@ class LandingFlyer(Node):
             max_horiz = 1.6 if current_z > 2.5 else 0.9
             vel_msg.twist.linear.x = max(min(vel_x, max_horiz), -max_horiz)
             vel_msg.twist.linear.y = max(min(vel_y, max_horiz), -max_horiz)
-            vel_msg.twist.linear.z = max(min(vel_z, -0.3), -2.2)  # обмежуємо вертикальну швидкість
+            vel_msg.twist.linear.z = max(min(vel_z, -0.4), -1.8)  # обмежуємо вертикальну швидкість
 
             self.velocity_pub.publish(vel_msg)
             cmd_z_vel = vel_z
