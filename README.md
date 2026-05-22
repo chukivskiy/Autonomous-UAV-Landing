@@ -6,7 +6,7 @@ The project uses **semantic segmentation** to find a safe landing zone, Archimed
 
 ---
 
-### 🎥 Demo Video
+### Demo Video
 
 ![Autonomous Landing Demo](https://github.com/user-attachments/assets/f0ec7b8a-8c8c-472b-9189-40bccf9911b1)
 
